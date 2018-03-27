@@ -1,10 +1,12 @@
-// Select color input
-// Select size input
 
-// When size is submitted by the user, call makeGrid()
+// Setup the Jquery object for the color, heigth and width
+var $color  = $('#colorPicker'), 
+    $height = $('#inputHeight'), 
+    $width  = $('#inputWidth');
 
-function makeGrid() {
-
-// Your code goes here!
+function makeGrid(evt) {
+    // prevents the form from refreshing on submit.
+    evt.preventDefault();
+    console.log("makeGrid", $color.val(), $height.val(), $width.val());
 
 }
