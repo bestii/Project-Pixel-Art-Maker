@@ -27,9 +27,10 @@ function makeGrid(evt) {
         }
     }
     
-    //setup event handler
-    $canvas.on('click', function(evt){
-        $(evt.target).css("background", $color.val());
-        //console.log(evt.target);
-    });
 }
+
+//setup event handler
+$canvas.on('click', 'td' , function(evt){
+    $(evt.target).css("background", $color.val());
+    //console.log(evt.target);
+});
