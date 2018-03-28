@@ -4,6 +4,8 @@ var $color  = $('#colorPicker'),
     $height = $('#inputHeight'), 
     $width  = $('#inputWidth'),
     $canvas = $("#pixelCanvas");
+
+// Create Grid Function
 function makeGrid(evt) {
     // prevents the form from refreshing on submit.
     evt.preventDefault();
@@ -24,4 +26,10 @@ function makeGrid(evt) {
            $('#row'+i).append(col);
         }
     }
+    
+    //setup event handler
+    $canvas.on('click', function(evt){
+        $(evt.target).css("background", $color.val());
+        //console.log(evt.target);
+    });
 }
