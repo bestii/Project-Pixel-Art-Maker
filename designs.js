@@ -31,6 +31,11 @@ function makeGrid(evt) {
 
 //setup event handler
 $canvas.on('click', 'td' , function(evt){
-    $(evt.target).css("background", $color.val());
-    //console.log(evt.target);
+    // switch color based on value.
+    if($(evt.target).css("background-color") === "rgba(0, 0, 0, 0)" ){
+        $(evt.target).css("background", $color.val());
+    }else{
+        $(evt.target).css("background", "rgba(0, 0, 0, 0)");
+    }
+    
 });
